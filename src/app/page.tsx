@@ -33,11 +33,11 @@ export default function Home() {
         {filmes.map((filme)=> {
           return (
             <div key={filme.id} className="filme">
-              <img src={`http://image.tmdb.org/t/p/original/${filme.poster_path}`} />
-              <div className="informacoes">
-                <h2>{filme.title}</h2>
 
-              </div>
+              <img src={`http://image.tmdb.org/t/p/original/${filme.poster_path}`} />
+
+              <button>Ver mais</button>
+
             </div>
           )
         })}
