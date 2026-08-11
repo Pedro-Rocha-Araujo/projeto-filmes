@@ -1,0 +1,33 @@
+header {
+  background-color: #333;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div.container {
+  width: 94%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: clamp(1rem, 8vw, 2.4rem);
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header i {
+  color: #fff;
+  transition: all 0.2s;
+}
+
+header i:hover {
+  transform: scale(1.15);
+}
