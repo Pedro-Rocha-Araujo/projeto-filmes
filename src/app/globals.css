@@ -12,69 +12,6 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-main div.container {
-  width: 94%;
-  max-width: 1080px;
-  margin: auto;
-}
-
-section.filmes {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.4rem;
-}
-
-div.filme {
-  background-color: #fff;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  width: 100%;
-  max-width: 500px;
-  position: relative;
-}
-
-div.filme img {
-  border-radius: 0.2rem;
-  width: 100%;
-  aspect-ratio: 11/16;
-  object-fit: cover;
-  object-position: bottom;
-}
-
-div.filme h2 {
-  margin: 0.2rem 0 0.5rem 0;
-}
-
-div.filme button {
-  font-size: 1rem;
-  width: 100%;
-  border: 1px solid #333;
-  color: #333;
-  background-color: #fff;
-  padding: 0.6rem 0;
-  border-radius: 1rem;
-  transition: all 0.3s;
-}
-
-div.filme button:hover {
-  color: #fff;
-  background-color: #333;
-}
-
-@media screen and (max-width: 1080px) {
-  section.filmes {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  section.filmes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 h1.loading {
   text-align: center;

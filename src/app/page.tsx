@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "dotenv/config"
+import "./home.css"
+import { Filme } from "@/interfaces";
 
 export default function Home() {
-  const [filmes, setFilmes] = useState([])
+  const [filmes, setFilmes] = useState<Filme[]>([])
   console.log(filmes)
   useEffect(()=>{
     async function getFilmes() {
