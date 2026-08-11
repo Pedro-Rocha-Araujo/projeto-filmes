@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <header>
       <div className="container">
-        <h1><Link href={"/"}>Filmes</Link></h1>
+        <h1> <i className="fa-solid fa-film" aria-hidden="true"></i> <Link href={"/"}>Filmes</Link></h1>
 
-        <i className="fa-solid fa-star fa-xl"></i>
+        <i className="fa-solid fa-star fa-xl" aria-hidden="true"></i>
       </div>
     </header>
   )
