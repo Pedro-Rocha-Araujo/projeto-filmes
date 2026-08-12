@@ -32,5 +32,13 @@ section.favoritos div.filme {
   align-items: center;
   justify-content: space-between;
   border-radius: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
+}
+
+section.favoritos div.filme i {
+  transition: all 0.2s;
+}
+
+section.favoritos div.filme i:hover {
+  transform: scale(1.1);
 }
