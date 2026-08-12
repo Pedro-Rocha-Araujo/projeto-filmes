@@ -38,26 +38,35 @@ export default function Detalhes() {
 
   return (
     <div className="container">
-      <section className="detalhes">
+      { !filme ? (
+        <section>
+          <h2 className="aviso"> 
+            <i className="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Filme Não encontrado
+          </h2>
+        </section>
+      ): (
+        <section className="detalhes">
 
-        <div className="imagem">
-          <img src={`http://image.tmdb.org/t/p/original/${filme?.poster_path}`} alt="Imagem de Teste" />
-        </div>
-
-        <div className="informacoes">
-          <h2>{filme?.title}</h2>
-
-          <div className="grupo">
-            <span> <i className="fa-regular fa-star" aria-hidden="true"></i>  {filme?.vote_average}</span>
-            <button>Ver trailer</button>
+          <div className="imagem">
+            <img src={`http://image.tmdb.org/t/p/original/${filme?.poster_path}`} alt="Imagem de Teste" />
           </div>
 
-          <p>{filme?.overview}</p>
+          <div className="informacoes">
+            <h2>{filme?.title}</h2>
 
-          <button className="fixo">Adicionar aos favoritos</button>
-        </div>
+            <div className="grupo">
+              <span> <i className="fa-regular fa-star" aria-hidden="true"></i>  {filme?.vote_average}</span>
+              <button>Ver trailer</button>
+            </div>
 
-      </section>
+            <p>{filme?.overview}</p>
+
+            <button className="fixo">Adicionar aos favoritos</button>
+          </div>
+
+        </section>
+
+      ) }
     </div>
   )
 }

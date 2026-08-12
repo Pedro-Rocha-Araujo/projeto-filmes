@@ -17,6 +17,14 @@ section.detalhes h2 {
   font-size: clamp(1rem, 6vw, 2rem);
 }
 
+h2.aviso {
+  text-align: center;
+  background-color: #f33;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
 section.detalhes p, section.detalhes span {
   font-size: clamp(0.9rem, 3vw, 1.05rem);
 }
