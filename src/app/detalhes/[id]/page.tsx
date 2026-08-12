@@ -37,6 +37,35 @@ export default function Detalhes() {
     getFilme()
   }, [id])
 
+  function addFavoritos() {
+    try {
+      if(!filme) {
+        return toast.error("Nenhum filme encontrado.")
+      }
+
+      const listaFavoritos = localStorage.getItem("listaFavoritos")
+
+      const filmesSalvos = listaFavoritos ? JSON.parse(listaFavoritos) : []
+
+      const consulta = filmesSalvos.some((filmeLs:string)=>{
+        return filmeLs === filme.title
+      })
+
+      if(consulta) {
+        return toast.error("Este filme já foi adicionado.")
+      }
+
+      filmesSalvos.push(filme.title)
+
+      localStorage.setItem("listaFavoritos", JSON.stringify(filmesSalvos))
+      toast.success("Filme adicionado.")
+
+    } catch(erro) {
+      console.log(erro)
+      toast.error("Erro ao adicionar.")
+    }
+  }
+
   return (
     <div className="container">
       { !filme ? (
@@ -68,7 +97,7 @@ export default function Detalhes() {
 
             <p>{filme?.overview}</p>
 
-            <button className="fixo">Adicionar aos favoritos</button>
+            <button onClick={()=>addFavoritos()} className="fixo">Adicionar aos favoritos</button>
           </div>
 
         </section>
