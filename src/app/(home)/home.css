@@ -48,7 +48,7 @@ div.filme button:hover {
   background-color: #333;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 820px) {
   section.filmes {
     grid-template-columns: 1fr 1fr;
   }

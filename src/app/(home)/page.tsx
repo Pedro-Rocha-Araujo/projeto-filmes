@@ -1,14 +1,17 @@
 'use client'
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import "dotenv/config"
 import "./home.css"
 import { Filme } from "@/interfaces";
 
 export default function Home() {
+  const router = useRouter()
+
   const [filmes, setFilmes] = useState<Filme[]>([])
-  console.log(filmes)
+
   useEffect(()=>{
     async function getFilmes() {
       try {
@@ -38,7 +41,7 @@ export default function Home() {
 
               <img src={`http://image.tmdb.org/t/p/original/${filme.poster_path}`} />
 
-              <button>Ver mais</button>
+              <button onClick={()=>router.push(`/detalhes/${filme.id}`)}>Ver mais</button>
 
             </div>
           )

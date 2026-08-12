@@ -1,0 +1,75 @@
+main div.container {
+  width: 94%;
+  max-width: 1080px;
+  margin: auto;
+}
+
+section.detalhes {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section.detalhes h2 {
+  font-size: clamp(1rem, 6vw, 2rem);
+}
+
+section.detalhes p, section.detalhes span {
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
+}
+
+div.imagem {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.imagem img {
+  width: 98%;
+  max-width: 420px;
+  aspect-ratio: 10/16;
+  object-fit: cover;
+}
+
+div.informacoes {
+  background-color: red;
+  position: relative;
+}
+
+section.detalhes button {
+  border: none;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #333;
+  color: #333;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+section.detalhes button:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+button.fixo {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+button.fixo:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+div.grupo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
