@@ -1,11 +1,13 @@
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-br">
       <body>
+        <ToastContainer autoClose={1000} />
         <Header />
         <main>
           {children}

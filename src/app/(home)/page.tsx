@@ -20,6 +20,9 @@ export default function Home() {
         const response = await axios.get(`https://api.themoviedb.org/3/movie/popular`, {
           headers: {
             Authorization: `Bearer ${token}`
+          },
+          params: {
+            language: "pt-BR"
           }
         })
 
