@@ -49,7 +49,7 @@ export default function Favoritos() {
         <div className="filmes">
 
           {favoritos.length === 0 && (
-            <p>Nenhum filme adicionado ainda</p>
+            <p>Nenhum filme adicionado ainda.</p>
           )}
 
           {favoritos.map((filme, index)=>{
