@@ -1,6 +1,7 @@
 'use client'
 
-import { useParams, useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import "./detalhes.css"
 import { toast } from "react-toastify"
@@ -9,7 +10,6 @@ import axios from "axios"
 import { Filme } from "@/interfaces"
 
 export default function Detalhes() {
-  const router = useRouter()
   const { id } = useParams()
 
   const [filme, setFilme] = useState<Filme | null>(null)
@@ -60,7 +60,10 @@ export default function Detalhes() {
 
             <div className="grupo">
               <span> <i className="fa-regular fa-star" aria-hidden="true"></i>  {filme?.vote_average}</span>
-              <button onClick={()=>router.push(`https://www.youtube.com/results?search_query=Trailer ${filme.title}`)}>Ver trailer</button>
+              <Link 
+                href={`https://www.youtube.com/results?search_query=Trailer ${filme.title}`}
+                target="_blank"
+              >Ver trailer</Link>
             </div>
 
             <p>{filme?.overview}</p>

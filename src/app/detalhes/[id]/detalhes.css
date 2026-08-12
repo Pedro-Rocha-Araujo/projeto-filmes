@@ -55,7 +55,8 @@ div.informacoes {
   padding-bottom: 3rem;
 }
 
-section.detalhes button {
+section.detalhes button, section.detalhes a {
+  text-decoration: none;
   border: none;
   font-size: 1rem;
   padding: 0.4rem 1rem;
@@ -66,7 +67,7 @@ section.detalhes button {
   transition: all 0.3s;
 }
 
-section.detalhes button:hover {
+section.detalhes button:hover, section.detalhes a:hover {
   color: #fff;
   background-color: #333;
 }
