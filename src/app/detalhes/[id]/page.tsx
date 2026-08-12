@@ -1,6 +1,6 @@
 'use client'
 
-import { useParams } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
 import "./detalhes.css"
 import { toast } from "react-toastify"
@@ -9,6 +9,7 @@ import axios from "axios"
 import { Filme } from "@/interfaces"
 
 export default function Detalhes() {
+  const router = useRouter()
   const { id } = useParams()
 
   const [filme, setFilme] = useState<Filme | null>(null)
@@ -48,7 +49,10 @@ export default function Detalhes() {
         <section className="detalhes">
 
           <div className="imagem">
-            <img src={`http://image.tmdb.org/t/p/original/${filme?.poster_path}`} alt="Imagem de Teste" />
+            <img 
+              src={`http://image.tmdb.org/t/p/original/${filme?.poster_path}`} 
+              alt={`Poster do filme ${filme.title}`} 
+            />
           </div>
 
           <div className="informacoes">
@@ -56,7 +60,7 @@ export default function Detalhes() {
 
             <div className="grupo">
               <span> <i className="fa-regular fa-star" aria-hidden="true"></i>  {filme?.vote_average}</span>
-              <button>Ver trailer</button>
+              <button onClick={()=>router.push(`https://www.youtube.com/results?search_query=Trailer ${filme.title}`)}>Ver trailer</button>
             </div>
 
             <p>{filme?.overview}</p>

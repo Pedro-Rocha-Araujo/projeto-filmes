@@ -22,7 +22,7 @@ h1.loading {
   color: #fff;
 }
 
-div.not-found {
+section.not-found {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -31,11 +31,11 @@ div.not-found {
   gap: 0.5rem;
 }
 
-div.not-found h2 {
+section.not-found h2 {
   color: #fff;
 }
 
-div.not-found button {
+section.not-found button {
   font-size: 1rem;
   border: 1px solid #333;
   background-color: #fff;
@@ -44,7 +44,7 @@ div.not-found button {
   transition: all 0.3s;
 }
 
-div.not-found button:hover {
+section.not-found button:hover {
   cursor: pointer;
   transform: scale(1.05);
 }

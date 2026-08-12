@@ -31,6 +31,7 @@ section.detalhes p, section.detalhes span {
 
 section.detalhes p {
   text-align: justify;
+  text-indent: 1rem;
 }
 
 div.imagem {

@@ -33,7 +33,7 @@ header i {
   transition: all 0.2s;
 }
 
-header i:hover {
+header i.fa-star:hover {
   transform: scale(1.15);
   cursor: pointer;
 }
